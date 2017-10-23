@@ -1,0 +1,1584 @@
+<!DOCTYPE html><html>
+
+<head>
+<meta charset="utf-8">
+<title># # API and Configuration</title>
+<style>
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+body {
+  background-color: white;
+}
+
+.markdown-body {
+  min-width: 200px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px;
+
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;;word-wrap: break-word; word-break: break-all;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .anchor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body .highlight {
+  background: #fff;
+}
+
+.markdown-body .highlight .mf,
+.markdown-body .highlight .mh,
+.markdown-body .highlight .mi,
+.markdown-body .highlight .mo,
+.markdown-body .highlight .il,
+.markdown-body .highlight .m {
+  color: #945277;
+}
+
+.markdown-body .highlight .s,
+.markdown-body .highlight .sb,
+.markdown-body .highlight .sc,
+.markdown-body .highlight .sd,
+.markdown-body .highlight .s2,
+.markdown-body .highlight .se,
+.markdown-body .highlight .sh,
+.markdown-body .highlight .si,
+.markdown-body .highlight .sx,
+.markdown-body .highlight .s1 {
+  color: #df5000;
+}
+
+.markdown-body .highlight .kc,
+.markdown-body .highlight .kd,
+.markdown-body .highlight .kn,
+.markdown-body .highlight .kp,
+.markdown-body .highlight .kr,
+.markdown-body .highlight .kt,
+.markdown-body .highlight .k,
+.markdown-body .highlight .o {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kt {
+  color: #458;
+}
+
+.markdown-body .highlight .c,
+.markdown-body .highlight .cm,
+.markdown-body .highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+
+.markdown-body .highlight .cp,
+.markdown-body .highlight .cs {
+  color: #999;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .cs {
+  font-style: italic;
+}
+
+.markdown-body .highlight .n {
+  color: #333;
+}
+
+.markdown-body .highlight .na,
+.markdown-body .highlight .nv,
+.markdown-body .highlight .vc,
+.markdown-body .highlight .vg,
+.markdown-body .highlight .vi {
+  color: #008080;
+}
+
+.markdown-body .highlight .nb {
+  color: #0086B3;
+}
+
+.markdown-body .highlight .nc {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .no {
+  color: #094e99;
+}
+
+.markdown-body .highlight .ni {
+  color: #800080;
+}
+
+.markdown-body .highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nf {
+  color: #945277;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nn {
+  color: #555;
+}
+
+.markdown-body .highlight .nt {
+  color: #000080;
+}
+
+.markdown-body .highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.markdown-body .highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+
+.markdown-body .highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+
+.markdown-body .highlight .ge {
+  font-style: italic;
+}
+
+.markdown-body .highlight .gr {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .gh {
+  color: #999;
+}
+
+.markdown-body .highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+
+.markdown-body .highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+
+.markdown-body .highlight .go {
+  color: #888;
+}
+
+.markdown-body .highlight .gp {
+  color: #555;
+}
+
+.markdown-body .highlight .gs {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gt {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .ow {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .w {
+  color: #bbb;
+}
+
+.markdown-body .highlight .sr {
+  color: #017936;
+}
+
+.markdown-body .highlight .ss {
+  color: #8b467f;
+}
+
+.markdown-body .highlight .bp {
+  color: #999;
+}
+
+.markdown-body .highlight .gc {
+  color: #999;
+  background-color: #EAF2F5;
+}
+
+.markdown-body .octicon {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  float: left;
+  margin: 0.3em 0 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.diff .hljs-header {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-doctag,
+.tex .hljs-formula {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-id,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-list .hljs-keyword,
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-class .hljs-title,
+.hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rule .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.hljs-name {
+  color: #008080;
+}
+
+.hljs-regexp {
+  color: #009926;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.clojure .hljs-keyword,
+.scheme .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073;
+}
+
+.hljs-built_in {
+  color: #0086b3;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+.hljs-chunk {
+  color: #aaa;
+}
+
+
+</style>
+
+<style> @media print{ .hljs{overflow: visible; word-wrap: break-word !important;} }</style></head><body><div class="markdown-body">
+<h1 id="toc_0"># API and Configuration</h1>
+
+<h2 id="toc_1">Available imports</h2>
+
+<ul>
+<li><code>Router</code></li>
+<li><code>Scene</code></li>
+<li><code>Tabs</code></li>
+<li><code>Tabbed Scene</code></li>
+<li><code>Drawer</code></li>
+<li><code>Modal</code></li>
+<li><code>Lightbox</code></li>
+<li><code>Actions</code></li>
+<li><code>ActionConst</code></li>
+</ul>
+
+<h2 id="toc_2">Router:</h2>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>children</td>
+<td></td>
+<td>必要</td>
+<td>页面根组件</td>
+</tr>
+<tr>
+<td><code>wrapBy</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>允许集成诸如Redux（connect）和Mobx（observer）之类的状态管理方案</td>
+</tr>
+<tr>
+<td><code>sceneStyle</code></td>
+<td><code>Style</code></td>
+<td></td>
+<td>适用于所有场景的Style（可选）</td>
+</tr>
+<tr>
+<td><code>backAndroidHandler</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>允许在Android中自定义控制返回按钮（可选）。有关更多信息，请查看<a href="https://facebook.github.io/react-native/docs/backhandler.html">BackHandler</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_3">Scene:</h2>
+
+<p>此路由器的最重要的组件， 所有 <code>&lt;Scene&gt;</code> 组件必须要有一个唯一的 <code>key</code>。父节点<code>&lt;Scene&gt;</code>不能将<code>component</code>作为<code>prop</code>，因为它将作为其子节点的分组组件。</p>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>key</code>      </td>
+<td><code>string</code></td>
+<td><code>required</code></td>
+<td>将用于标识页面，例如<code>Actions.name(params)</code>。必须是独一无二的</td>
+</tr>
+<tr>
+<td><code>component</code></td>
+<td><code>React.Component</code></td>
+<td><code>semi-required</code></td>
+<td>要显示的组件，定义嵌套时不需要<code>Scene</code>，参见示例。</td>
+</tr>
+<tr>
+<td><code>back</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>如果是<code>true</code>，则显示后退按钮，而不是由上层容器定义的左/drawer按钮。</td>
+</tr>
+<tr>
+<td><code>backButtonImage</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>设置返回按钮的图片</td>
+</tr>
+<tr>
+<td><code>backButtonTintColor</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>自定义后退按钮色调</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>init</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>如果是<code>true</code>后退按钮不会显示</td>
+</tr>
+<tr>
+<td><code>clone</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>标有<code>clone</code>的场景将被视为模板，并在被推送时克隆到当前场景的父节点中。详情请参见示例。</td>
+</tr>
+<tr>
+<td><code>contentComponent</code></td>
+<td><code>React.Component</code></td>
+<td></td>
+<td>Component used to render the content of the drawer (e.g. navigation items).</td>
+</tr>
+<tr>
+<td><code>drawer</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>load child scenes inside <a href="https://reactnavigation.org/docs/navigators/drawer">DrawerNavigator</a></td>
+</tr>
+<tr>
+<td><code>failure</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>If <code>on</code> returns a &quot;falsey&quot; value then <code>failure</code> is called.</td>
+</tr>
+<tr>
+<td><code>backTitle</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>Specifies the back button title for scene</td>
+</tr>
+<tr>
+<td><code>headerMode</code></td>
+<td><code>string</code></td>
+<td><code>float</code></td>
+<td>Specifies how the header should be rendered: <code>float</code> (render a single header that stays at the top and animates as screens are changed. This is a common pattern on iOS.), <code>screen</code> (each screen has a header attached to it and the header fades in and out together with the screen. This is a common pattern on Android) or <code>none</code> (No header will be rendered)</td>
+</tr>
+<tr>
+<td><code>hideNavBar</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>hide the nav bar</td>
+</tr>
+<tr>
+<td><code>hideTabBar</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>hide the tab bar (only applies to scenes with <code>tabs</code> specified)</td>
+</tr>
+<tr>
+<td><code>hideBackImage</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>hide back image</td>
+</tr>
+<tr>
+<td><code>initial</code>  </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>Set to <code>true</code> if this is the first scene to display among its sibling <code>Scene</code>s</td>
+</tr>
+<tr>
+<td><code>leftButtonImage</code></td>
+<td><code>Image</code></td>
+<td></td>
+<td>Image to substitute for the left nav bar button</td>
+</tr>
+<tr>
+<td><code>leftButtonTextStyle</code></td>
+<td><code>Style</code></td>
+<td></td>
+<td>Style applied to left button text</td>
+</tr>
+<tr>
+<td><code>modal</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>Defines scene container as &#39;modal&#39; one, i.e. all children scenes will have bottom-to-top animation. It is applicable only for containers (different from v3 syntax)</td>
+</tr>
+<tr>
+<td><code>navBar</code></td>
+<td><code>React.Component</code></td>
+<td></td>
+<td>Optional React component to render custom NavBar</td>
+</tr>
+<tr>
+<td><code>navBarButtonColor</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>Set the color of the back button in the navBar</td>
+</tr>
+<tr>
+<td><code>navigationBarStyle</code>    </td>
+<td><code>Style</code></td>
+<td></td>
+<td>Style applied to nav bar</td>
+</tr>
+<tr>
+<td><code>navigationBarTitleImage</code></td>
+<td><code>Object</code></td>
+<td></td>
+<td>The <code>Image</code> source that overrides the <code>title</code> in the navbar the image in the center of the navbar</td>
+</tr>
+<tr>
+<td><code>navigationBarTitleImageStyle</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>Styles to apply to <code>navigationBarTitleImage</code></td>
+</tr>
+<tr>
+<td><code>navTransparent</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>nav bar background transparency</td>
+</tr>
+<tr>
+<td><code>on</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>aka <code>onEnter</code></td>
+</tr>
+<tr>
+<td><code>onEnter</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>Called when the <code>Scene</code> is navigated to. <code>props</code> are provided as a function param. Only scenes with &#39;component&#39; defined is supported</td>
+</tr>
+<tr>
+<td><code>onExit</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>Called when the <code>Scene</code> is navigated away from. Only scenes with &#39;component&#39; defined is supported</td>
+</tr>
+<tr>
+<td><code>onLeft</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>Called when the left nav bar button is pressed.</td>
+</tr>
+<tr>
+<td><code>onRight</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>Called when the right nav bar button is pressed.</td>
+</tr>
+<tr>
+<td><code>renderTitle</code></td>
+<td><code>React.Component</code></td>
+<td></td>
+<td>React component to render title for nav bar</td>
+</tr>
+<tr>
+<td><code>renderLeftButton</code></td>
+<td><code>React.Component</code></td>
+<td></td>
+<td>React component to render as the left button</td>
+</tr>
+<tr>
+<td><code>renderRightButton</code></td>
+<td><code>React.Component</code></td>
+<td></td>
+<td>React component to render as the right button</td>
+</tr>
+<tr>
+<td><code>renderBackButton</code></td>
+<td><code>React.Component</code></td>
+<td></td>
+<td>React component to render back button</td>
+</tr>
+<tr>
+<td><code>rightButtonImage</code></td>
+<td><code>Image</code></td>
+<td></td>
+<td>Image to substitute for the right nav bar button</td>
+</tr>
+<tr>
+<td><code>rightButtonTextStyle</code></td>
+<td><code>Style</code></td>
+<td></td>
+<td>Style applied to right button text</td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>If <code>on</code> returns a &quot;truthy&quot; value then <code>success</code> is called.</td>
+</tr>
+<tr>
+<td><code>tabs</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>load child scenes as <a href="https://reactnavigation.org/docs/navigators/tab">TabNavigator</a>. Other <a href="https://reactnavigation.org/docs/navigators/tab#TabNavigatorConfig">Tab Navigator  props</a> also apply here.</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>Text to be displayed in the center of the nav bar.</td>
+</tr>
+<tr>
+<td><code>titleStyle</code></td>
+<td><code>Style</code></td>
+<td></td>
+<td>Style applied to the title</td>
+</tr>
+<tr>
+<td><code>type</code>  </td>
+<td><code>string</code></td>
+<td><code>push</code></td>
+<td>Optional type of navigation action. You could use <code>replace</code> to replace current scene with this scene</td>
+</tr>
+<tr>
+<td>all other props</td>
+<td></td>
+<td></td>
+<td>Any other props not listed here will be pass on to the specified <code>Scene</code>&#39;s <code>component</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_4">Tabs (<code>&lt;Tabs&gt;</code> or <code>&lt;Scene tabs&gt;</code>)</h2>
+
+<p>Can use all <code>props</code> listed above in <code>&lt;Scene&gt;</code> as <code>&lt;Tabs&gt;</code> is syntatic sugar for <code>&lt;Scene tabs={true}&gt;</code>.</p>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>wrap</code>    </td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>Wrap each scene with own navbar automatically (if it is not another container).</td>
+</tr>
+<tr>
+<td><code>activeBackgroundColor</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>Specifies the active background color for the tab in focus</td>
+</tr>
+<tr>
+<td><code>activeTintColor</code>    </td>
+<td><code>string</code></td>
+<td></td>
+<td>Specifies the active tint color for tabbar icons</td>
+</tr>
+<tr>
+<td><code>inactiveBackgroundColor</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>Specifies the inactive background color for the tabs not in focus</td>
+</tr>
+<tr>
+<td><code>inactiveTintColor</code>    </td>
+<td><code>string</code></td>
+<td></td>
+<td>Specifies the inactive tint color for tabbar icons</td>
+</tr>
+<tr>
+<td><code>labelStyle</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>Overrides the styles for the tab label</td>
+</tr>
+<tr>
+<td><code>lazy</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>Won&#39;t render/mount the tab scene until the tab is active</td>
+</tr>
+<tr>
+<td><code>tabBarComponent</code></td>
+<td><code>React.Component</code></td>
+<td></td>
+<td>React component to render custom tab bar</td>
+</tr>
+<tr>
+<td><code>tabBarPosition</code>    </td>
+<td><code>string</code></td>
+<td></td>
+<td>Specifies tabbar position. Defaults to <code>bottom</code> on iOS and <code>top</code> on Android.</td>
+</tr>
+<tr>
+<td><code>tabBarStyle</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>Override the tabbar styles</td>
+</tr>
+<tr>
+<td><code>tabStyle</code></td>
+<td><code>object</code></td>
+<td></td>
+<td>Override the style for an individual tab of the tabbar</td>
+</tr>
+<tr>
+<td><code>showLabel</code>    </td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>Boolean to show or not the tabbar icons labels</td>
+</tr>
+<tr>
+<td><code>swipeEnabled</code>    </td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>Enable or disable swiping tabs.</td>
+</tr>
+<tr>
+<td><code>tabBarOnPress</code>    </td>
+<td><code>function</code></td>
+<td></td>
+<td>Custom tab bar icon press.</td>
+</tr>
+<tr>
+<td><code>backToInitial</code>    </td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>Back to initial screen on focused tab if tab icon was tapped.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_5">Stack (<code>&lt;Stack&gt;</code>)</h2>
+
+<p>A component to group Scenes together for its own stack based navigation. Using this will create a separate havigator for this stack, so expect two navbars to appear unless you add <code>hideNavBar</code>.</p>
+
+<h2 id="toc_6">Tab Scene (child <code>&lt;Scene&gt;</code> within <code>Tabs</code>)</h2>
+
+<p>A <code>Scene</code> that is a direct child of <code>Tabs</code> and can use all <code>props</code> listed above in <code>Scene</code>,</p>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>icon</code></td>
+<td><code>component</code></td>
+<td><code>undefined</code></td>
+<td>a React Native component to place as a tab icon</td>
+</tr>
+<tr>
+<td><code>tabBarLabel</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>The string to override a tab label</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_7">Drawer (<code>&lt;Drawer&gt;</code> or <code>&lt;Scene drawer&gt;</code>)</h2>
+
+<p>Can use all <code>prop</code> as listed in <code>Scene</code> as <code>&lt;Drawer&gt;</code>, syntatic sugar for <code>&lt;Scene drawer={true}&gt;</code></p>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>drawerImage</code></td>
+<td><code>Image</code></td>
+<td></td>
+<td>Image to substitute drawer &#39;hamburger&#39; icon, you have to set it together with <code>drawer</code> prop</td>
+</tr>
+<tr>
+<td><code>drawerIcon</code></td>
+<td><code>React.Component</code></td>
+<td></td>
+<td>Arbitrary component to be used for drawer &#39;hamburger&#39; icon, you have to set it together with <code>drawer</code> prop</td>
+</tr>
+<tr>
+<td><code>hideDrawerButton</code></td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>Boolean to show or not the drawerImage or drawerIcon</td>
+</tr>
+<tr>
+<td><code>drawerPosition</code></td>
+<td><code>string</code></td>
+<td>Determines whether the drawer is on the right or the left. Keywords accepted are <code>right</code> and <code>left</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>drawerWidth</code></td>
+<td><code>number</code></td>
+<td></td>
+<td>The width, in pixels, of the drawer (optional)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_8">Modals (<code>&lt;Modal&gt;</code> or <code>&lt;Scene modal&gt;</code>)</h2>
+
+<p>To implement a modal, you must use <code>&lt;Modal&gt;</code> as the root scene in your <code>Router</code>. The <code>Modal</code> will render the first scene (should be your true root scene) normally, and all following<br/>
+To display a modal use <code>&lt;Modal&gt;</code> as root renderer, so it will render the first element as <code>normal</code> scene and all others as popups (when they are pushed).</p>
+
+<p>Example:<br/>
+In the example below, the <code>root</code> Scene is nested within a <code>&lt;Modal&gt;</code>, since it is the first nested <code>Scene</code>, it will render normally. If one were to <code>push</code> to <code>statusModal</code>, <code>errorModal</code> or <code>loginModal</code>, they will render as a <code>Modal</code> and by default will pull up from the bottom of the screen. It is important to note that currently the <code>Modal</code> does not allow for transparent backgrounds.</p>
+
+<pre><code class="language-jsx">//... import components
+&lt;Router&gt;
+  &lt;Modal&gt;
+    &lt;Scene key=&quot;root&quot;&gt;
+      &lt;Scene key=&quot;screen1&quot; initial={true} component={Screen1} /&gt;
+      &lt;Scene key=&quot;screen2&quot; component={Screen2} /&gt;
+    &lt;/Scene&gt;
+    &lt;Scene key=&quot;statusModal&quot; component={StatusModal} /&gt;
+    &lt;Scene key=&quot;errorModal&quot; component={ErrorModal} /&gt;
+    &lt;Scene key=&quot;loginModal&quot; component={LoginModal} /&gt;
+  &lt;/Modal&gt;
+&lt;/Router&gt;
+</code></pre>
+
+<h2 id="toc_9">Lightbox (<code>&lt;Lightbox&gt;</code>)</h2>
+
+<p>Lightbox is a component used to render a component on top of the current <code>Scene</code>. Unlike modal, it will allow for resizing and transparency of the background.</p>
+
+<p>Example:<br/>
+In the example below, the <code>root</code> Scene is nested within a <code>&lt;Lightbox&gt;</code>, since it is the first nested <code>Scene</code>, it will render normally. If one were to <code>push</code> to <code>loginLightbox</code>, they will render as a <code>Lightbox</code> and by default will lay on top of the current <code>Scene</code> allowing for transparent backrounds.</p>
+
+<pre><code class="language-jsx">//... import components
+&lt;Router&gt;
+  &lt;Lightbox&gt;
+    &lt;Scene key=&quot;root&quot;&gt;
+      &lt;Scene key=&quot;screen1&quot; initial={true} component={Screen1} /&gt;
+      &lt;Scene key=&quot;screen2&quot; component={Screen2} /&gt;
+    &lt;/Scene&gt;
+
+    {/* Lightbox components will lay over the screen, allowing transparency*/}
+    &lt;Scene key=&quot;loginLightbox&quot; component={loginLightbox} /&gt;
+  &lt;/Lightbox&gt;
+&lt;/Router&gt;
+</code></pre>
+
+<h2 id="toc_10">Actions</h2>
+
+<p>This <code>Object</code> is the main utility is to provide navigation features to your application. Assuming your <code>Router</code> and <code>Scenes</code> are configured properly, use the properties listed below to navigate between scenes. Some offer the added functionality to pass React <code>props</code> to the navigated scene.</p>
+
+<p>These can be used directly, for example, <code>Actions.pop()</code> will dispatch correspond action written in the source code, or, you can set those constants in scene type, when you do Actions.main(), it will dispatch action according to your scene type or the default one.</p>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>[key]</code></td>
+<td><code>Function</code></td>
+<td><code>Object</code></td>
+<td>The <code>Actions</code> object &quot;automagically&quot; uses the <code>Scene</code>&#39;s <code>key</code> prop in the <code>Router</code> to navigate. To navigate to a scene, call <code>Actions.key()</code> or <code>Actions[key].call()</code>.</td>
+</tr>
+<tr>
+<td><code>currentScene</code></td>
+<td><code>String</code></td>
+<td></td>
+<td>Returns the current scene that is active</td>
+</tr>
+<tr>
+<td><code>jump</code></td>
+<td><code>Function</code></td>
+<td><code>(sceneKey: String, props: Object)</code></td>
+<td>used to switch to a new tab. For <code>Tabs</code> only.</td>
+</tr>
+<tr>
+<td><code>pop</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>Go back to the previous scene by &quot;popping&quot; the current scene off the nav stack</td>
+</tr>
+<tr>
+<td><code>popTo</code></td>
+<td><code>Function</code></td>
+<td><code>(sceneKey: String, props: Object)</code></td>
+<td>Pops the navigation stack until the <code>Scene</code> with the specified key is reached.</td>
+</tr>
+<tr>
+<td><code>push</code></td>
+<td><code>Function</code></td>
+<td><code>(sceneKey: String, props: Object)</code></td>
+<td>Pushes the scene to the stack, performing a transition to the new scene.</td>
+</tr>
+<tr>
+<td><code>refresh</code></td>
+<td><code>Function</code></td>
+<td><code>(props: Object)</code></td>
+<td>Reloads the current scene by loading new <code>props</code> into the <code>Scene</code></td>
+</tr>
+<tr>
+<td><code>replace</code></td>
+<td><code>Function</code></td>
+<td><code>(sceneKey: String, props: Object)</code></td>
+<td>Pops the current scene from the stack and pushes the new scene to the navigation stack. *No transition will occur.</td>
+</tr>
+<tr>
+<td><code>reset</code></td>
+<td><code>Function</code></td>
+<td><code>(sceneKey: String, props: Object)</code></td>
+<td>Clears the routing stack and pushes the scene into the first index. <em>No transition will occur.</em></td>
+</tr>
+<tr>
+<td><code>drawerOpen</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>Opens the <code>Drawer</code> if applicable</td>
+</tr>
+<tr>
+<td><code>drawerClose</code></td>
+<td><code>Function</code></td>
+<td></td>
+<td>Closes the <code>Drawer</code> if applicable</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_11">ActionConst</h2>
+
+<p>Type constants to determine <code>Scene</code> transitions, These are <strong>PREFERRED</strong> over typing their values manually as these are subject to change as the project is updated.</p>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Value</th>
+<th>Shorthand</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>ActionConst.JUMP</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_JUMP&#39;</td>
+<td><code>jump</code></td>
+</tr>
+<tr>
+<td><code>ActionConst.PUSH</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_PUSH&#39;</td>
+<td><code>push</code></td>
+</tr>
+<tr>
+<td><code>ActionConst.PUSH_OR_POP</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_PUSH_OR_POP&#39;</td>
+<td><code>push</code></td>
+</tr>
+<tr>
+<td><code>ActionConst.REPLACE</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_REPLACE&#39;</td>
+<td><code>replace</code></td>
+</tr>
+<tr>
+<td><code>ActionConst.BACK</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_BACK&#39;</td>
+<td><code>pop</code></td>
+</tr>
+<tr>
+<td><code>ActionConst.BACK_ACTION</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_BACK_ACTION&#39;</td>
+<td><code>pop</code></td>
+</tr>
+<tr>
+<td><code>ActionConst.POP_TO</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_POP_TO&#39;</td>
+<td><code>popTo</code></td>
+</tr>
+<tr>
+<td><code>ActionConst.REFRESH</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_REFRESH&#39;</td>
+<td><code>refresh</code></td>
+</tr>
+<tr>
+<td><code>ActionConst.RESET</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_RESET&#39;</td>
+<td><code>reset</code></td>
+</tr>
+<tr>
+<td><code>ActionConst.FOCUS</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_FOCUS&#39;</td>
+<td><em>N/A</em></td>
+</tr>
+<tr>
+<td><code>ActionConst.BLUR</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_BLUR&#39;</td>
+<td><em>N/A</em></td>
+</tr>
+<tr>
+<td><code>ActionConst.ANDROID_BACK</code></td>
+<td><code>string</code></td>
+<td>&#39;REACT_NATIVE_ROUTER_FLUX_ANDROID_BACK&#39;</td>
+<td><em>N/A</em></td>
+</tr>
+</tbody>
+</table>
+
+</div></body>
+
+</html>
